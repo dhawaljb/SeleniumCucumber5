@@ -132,7 +132,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <!--<file>src/test/resources/TestSuite/API/testng.xml</file>-->
-                        <suiteXmlFile>src/test/resources/${suiteXmlFile}</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/testngForWeb.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

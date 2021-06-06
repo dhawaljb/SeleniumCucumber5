@@ -17,6 +17,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.CapabilityType;
@@ -57,7 +58,7 @@ public class DriverUtils {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.setExperimentalOption("useAutomationExtension", false);
-        if ("yes".equalsIgnoreCase(headless)) {
+        if ("yes".equalsIgnoreCase("headless")) {
             options.addArguments("--headless");
             options.addArguments("--window-size=1920,1080");
         }
@@ -147,7 +148,7 @@ public class DriverUtils {
         profile.setPreference("browser.download.folderList", 2);
         DesiredCapabilities capabilities = DesiredCapabilities.firefox();
         options.setAcceptInsecureCerts(true);
-        if ("yes".equalsIgnoreCase(headless)) {
+        if ("yes".equalsIgnoreCase("headless")) {
             options.addArguments("--headless");
         }
         options.setProfile(profile);
